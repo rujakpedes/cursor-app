@@ -1,0 +1,67 @@
+.delivery-opt {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 14px 16px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-align: left;
+  background: var(--color-white);
+  transition: border-color 0.15s;
+}
+
+.delivery-opt--selected {
+  border-color: var(--color-primary);
+  background: #eef2ff;
+}
+
+.delivery-opt__left {
+  flex: 1;
+}
+
+.delivery-opt__header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.delivery-opt__label {
+  font-weight: 700;
+  font-size: var(--font-sm);
+}
+
+.delivery-opt__dot {
+  color: var(--color-text-muted);
+}
+
+.delivery-opt__time {
+  font-size: var(--font-sm);
+  color: var(--color-text-secondary);
+}
+
+.delivery-opt__desc {
+  font-size: var(--font-xs);
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+.delivery-opt__prices {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.delivery-opt__sale {
+  font-weight: 700;
+  font-size: var(--font-sm);
+  color: var(--color-discount);
+}
+
+.delivery-opt__orig {
+  font-size: var(--font-sm);
+  color: var(--color-text-muted);
+  text-decoration: line-through;
+}
