@@ -1,0 +1,16 @@
+.menu-grid {
+  padding: 0 16px;
+}
+
+.menu-grid__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 14px;
+}
+
+.menu-grid__items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}

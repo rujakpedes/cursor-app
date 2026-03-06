@@ -1,0 +1,44 @@
+.basket-bar__wrap {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 480px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.basket-bar__grab {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 16px;
+  background: var(--blue-600);
+  color: var(--white);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.basket-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px 20px;
+  background: var(--blue-600);
+  color: var(--white);
+}
+
+.basket-bar__label {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.basket-bar__price {
+  font-size: 15px;
+  font-weight: 700;
+}
