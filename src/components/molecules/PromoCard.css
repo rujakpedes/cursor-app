@@ -1,0 +1,26 @@
+.promo-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  min-width: 200px;
+  flex-shrink: 0;
+}
+
+.promo-card__icon {
+  font-size: 20px;
+}
+
+.promo-card__text {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.promo-card__sub {
+  font-size: 11px;
+  color: var(--gray-500);
+  margin-top: 1px;
+}

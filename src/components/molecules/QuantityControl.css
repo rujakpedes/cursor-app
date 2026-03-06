@@ -1,0 +1,31 @@
+.qty-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--white);
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-full);
+  padding: 2px 4px;
+}
+
+.qty-control__btn {
+  width: 26px;
+  height: 26px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-600);
+  transition: background 0.15s;
+}
+
+.qty-control__btn:hover {
+  background: var(--blue-50);
+}
+
+.qty-control__value {
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 16px;
+  text-align: center;
+}

@@ -1,0 +1,17 @@
+.action-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-700);
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+
+.action-chip:hover {
+  background: var(--gray-50);
+}
