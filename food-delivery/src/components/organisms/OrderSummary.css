@@ -1,0 +1,134 @@
+.order-summary {
+  background: var(--color-white);
+}
+
+.order-summary__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+.order-summary__title {
+  font-size: var(--font-xl);
+  font-weight: 700;
+}
+
+.order-summary__add {
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.order-summary__items {
+  padding: 0 16px;
+}
+
+.order-summary__fees {
+  padding: 16px;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fee-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-sm);
+  color: var(--color-text-secondary);
+}
+
+.fee-row--discount {
+  color: var(--color-discount);
+  font-weight: 600;
+}
+
+.order-summary__section {
+  padding: 16px;
+  border-top: 6px solid var(--color-off-white);
+}
+
+.order-summary__section-title {
+  font-size: var(--font-lg);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.eco-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.eco-row > div {
+  flex: 1;
+}
+
+.eco-row__title {
+  font-size: var(--font-sm);
+  font-weight: 600;
+}
+
+.eco-row__desc {
+  font-size: var(--font-xs);
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+.eco-row__link {
+  font-size: var(--font-xs);
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-top: 4px;
+  padding: 0;
+}
+
+.cutlery-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cutlery-row__label {
+  font-size: var(--font-base);
+  font-weight: 600;
+}
+
+.order-summary__total {
+  padding: 16px;
+  border-top: 6px solid var(--color-off-white);
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.total-row__label {
+  font-size: var(--font-base);
+  font-weight: 500;
+}
+
+.total-row__right {
+  text-align: right;
+}
+
+.total-row__amount {
+  font-size: var(--font-2xl);
+  font-weight: 700;
+}
+
+.total-row__original {
+  display: block;
+  font-size: var(--font-sm);
+  color: var(--color-text-muted);
+  text-decoration: line-through;
+}
+
+.total-row__saved {
+  font-size: var(--font-sm);
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}

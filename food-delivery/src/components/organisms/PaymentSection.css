@@ -1,0 +1,36 @@
+.payment-section__block {
+  background: var(--color-white);
+  padding: 16px;
+  border-top: 6px solid var(--color-off-white);
+}
+
+.payment-section__title {
+  font-size: var(--font-base);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.payment-section__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 12px 0;
+}
+
+.payment-section__row-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.payment-section__row-label {
+  font-size: var(--font-sm);
+  font-weight: 600;
+}
+
+.payment-section__row-sub {
+  font-size: var(--font-xs);
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
