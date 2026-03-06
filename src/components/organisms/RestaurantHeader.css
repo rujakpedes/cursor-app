@@ -1,0 +1,48 @@
+.rest-header {
+  display: flex;
+  gap: 14px;
+  padding: 16px;
+  background: var(--color-bg-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  margin: -24px 16px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.rest-header__img {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.rest-header__info {
+  min-width: 0;
+}
+
+.rest-header__name {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.2;
+}
+
+.rest-header__location {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  margin: 2px 0 4px;
+}
+
+.rest-header__pricing {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.rest-header__delivery {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}

@@ -1,0 +1,112 @@
+.order-summary__section {
+  padding: 16px;
+  border-bottom: 6px solid var(--color-bg);
+}
+
+.order-summary__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-summary__title {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.order-summary__add {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-primary);
+  padding: 0;
+}
+
+.order-summary__fees {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.order-summary__subtitle {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.order-summary__eco {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.order-summary__eco-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.order-summary__eco-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.order-summary__eco-desc {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.order-summary__eco-link {
+  font-size: 13px;
+  color: var(--color-primary);
+  font-weight: 500;
+  margin-top: 6px;
+  padding: 0;
+}
+
+.order-summary__cutlery {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.order-summary__checkbox {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--color-primary);
+}
+
+.order-summary__total-section {
+  padding: 20px 16px;
+}
+
+.order-summary__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.order-summary__total-price {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.order-summary__savings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.order-summary__original {
+  text-decoration: line-through;
+  color: var(--color-text-light);
+}

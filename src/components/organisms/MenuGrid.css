@@ -1,0 +1,16 @@
+.menu-grid {
+  padding: 20px 16px;
+}
+
+.menu-grid__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 14px;
+}
+
+.menu-grid__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
