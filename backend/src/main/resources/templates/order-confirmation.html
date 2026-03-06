@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #1f2937; }
+        .header { background: #1a56db; color: white; padding: 20px; text-align: center; border-radius: 8px 8px 0 0; }
+        .content { padding: 20px; background: #f8f9fb; }
+        .item-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #e5e7eb; }
+        .total { font-size: 20px; font-weight: bold; text-align: right; padding: 16px 0; }
+        .footer { padding: 16px; text-align: center; font-size: 12px; color: #6b7280; }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>Order Confirmed!</h1>
+</div>
+<div class="content">
+    <p>Thank you for your order!</p>
+    <p><strong>Order #</strong> <span th:text="${order.orderNumber}"></span></p>
+    <p><strong>Status:</strong> <span th:text="${order.status}"></span></p>
+
+    <h3>Items</h3>
+    <div th:each="item : ${items}">
+        <div class="item-row">
+            <span th:text="${item.product.name} + ' x' + ${item.quantity}"></span>
+            <span th:text="'Rp' + ${#numbers.formatInteger(item.lineTotal, 1, 'POINT')}"></span>
+        </div>
+    </div>
+
+    <hr/>
+    <div class="item-row">
+        <span>Subtotal</span>
+        <span th:text="'Rp' + ${#numbers.formatInteger(order.subtotal, 1, 'POINT')}"></span>
+    </div>
+    <div class="item-row">
+        <span>Delivery</span>
+        <span th:text="'Rp' + ${#numbers.formatInteger(order.deliveryFee, 1, 'POINT')}"></span>
+    </div>
+    <div class="item-row" th:if="${order.discount != null and order.discount != 0}">
+        <span>Discount</span>
+        <span th:text="'Rp' + ${#numbers.formatInteger(order.discount, 1, 'POINT')}"></span>
+    </div>
+
+    <div class="total">
+        Total: <span th:text="'Rp' + ${#numbers.formatInteger(order.total, 1, 'POINT')}"></span>
+    </div>
+</div>
+<div class="footer">
+    <p>This is an automated message. Please do not reply.</p>
+</div>
+</body>
+</html>
