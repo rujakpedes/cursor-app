@@ -1,6 +1,6 @@
 import React from 'react';
 import { Clock, Info } from 'lucide-react';
-import { DeliveryOption } from '../../data/menuData';
+import { DeliveryOption } from '../../data/types';
 import { formatRupiah } from '../atoms/PriceDisplay';
 import './DeliveryOptionCard.css';
 
@@ -15,10 +15,7 @@ export const DeliveryOptionCard: React.FC<DeliveryOptionCardProps> = ({
   selected,
   onSelect,
 }) => (
-  <button
-    className={`delivery-opt ${selected ? 'delivery-opt--selected' : ''}`}
-    onClick={onSelect}
-  >
+  <button className={`delivery-opt ${selected ? 'delivery-opt--selected' : ''}`} onClick={onSelect}>
     <div className="delivery-opt__left">
       <div className="delivery-opt__header">
         {option.isRecommended && <Clock size={16} color="var(--color-primary)" />}
@@ -27,13 +24,11 @@ export const DeliveryOptionCard: React.FC<DeliveryOptionCardProps> = ({
         <span className="delivery-opt__time">{option.time}</span>
         {option.description && <Info size={14} color="var(--color-text-muted)" />}
       </div>
-      {option.description && (
-        <p className="delivery-opt__desc">{option.description}</p>
-      )}
+      {option.description && <p className="delivery-opt__desc">{option.description}</p>}
     </div>
     <div className="delivery-opt__prices">
-      <span className="delivery-opt__sale">{formatRupiah(option.discountPrice)}</span>
-      <span className="delivery-opt__orig">{formatRupiah(option.originalPrice)}</span>
+      <span className="delivery-opt__sale">{formatRupiah(option.fee)}</span>
+      <span className="delivery-opt__orig">{formatRupiah(option.originalFee)}</span>
     </div>
   </button>
 );

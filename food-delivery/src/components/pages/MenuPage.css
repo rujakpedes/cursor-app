@@ -7,3 +7,40 @@
 .menu-page__spacer {
   height: 80px;
 }
+
+.menu-page__user-bar {
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-page__user-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  background: var(--color-off-white);
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.menu-page__user-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.menu-page__guest-note {
+  font-size: var(--font-sm);
+  color: var(--color-text-muted);
+}
+
+.menu-page__login-link {
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: var(--font-sm);
+  padding: 0;
+}

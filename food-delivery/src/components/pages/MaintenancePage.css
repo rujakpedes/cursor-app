@@ -1,0 +1,29 @@
+.maintenance-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
+  background: var(--color-bg);
+}
+
+.maintenance-card {
+  text-align: center;
+  background: var(--color-white);
+  padding: 40px 24px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  max-width: 400px;
+  width: 100%;
+}
+
+.maintenance-card h1 {
+  margin-top: 16px;
+  font-size: var(--font-2xl);
+}
+
+.maintenance-card p {
+  margin-top: 12px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}

@@ -1,76 +1,77 @@
 import React, { createContext, useContext, useReducer, ReactNode } from 'react';
-import { MenuItem } from '../data/menuData';
+import { Product } from '../data/types';
 
 export interface CartItem {
-  item: MenuItem;
+  product: Product;
   quantity: number;
 }
 
 interface CartState {
   items: CartItem[];
-  deliveryOptionId: string;
+  deliveryType: string;
   greenContribution: boolean;
   cutlery: boolean;
+  promoCode: string;
+  promoDiscount: number;
 }
 
 type CartAction =
-  | { type: 'ADD_ITEM'; payload: MenuItem }
-  | { type: 'REMOVE_ITEM'; payload: string }
-  | { type: 'SET_QUANTITY'; payload: { id: string; quantity: number } }
+  | { type: 'ADD_ITEM'; payload: Product }
+  | { type: 'REMOVE_ITEM'; payload: number }
+  | { type: 'CLEAR' }
   | { type: 'SET_DELIVERY'; payload: string }
   | { type: 'TOGGLE_GREEN' }
-  | { type: 'TOGGLE_CUTLERY' };
+  | { type: 'TOGGLE_CUTLERY' }
+  | { type: 'SET_PROMO'; payload: { code: string; discount: number } }
+  | { type: 'CLEAR_PROMO' };
 
 const initialState: CartState = {
   items: [],
-  deliveryOptionId: 'priority',
+  deliveryType: 'PRIORITY',
   greenContribution: false,
   cutlery: false,
+  promoCode: '',
+  promoDiscount: 0,
 };
 
 function cartReducer(state: CartState, action: CartAction): CartState {
   switch (action.type) {
     case 'ADD_ITEM': {
-      const existing = state.items.find((ci) => ci.item.id === action.payload.id);
+      const existing = state.items.find((ci) => ci.product.id === action.payload.id);
       if (existing) {
         return {
           ...state,
           items: state.items.map((ci) =>
-            ci.item.id === action.payload.id ? { ...ci, quantity: ci.quantity + 1 } : ci
+            ci.product.id === action.payload.id ? { ...ci, quantity: ci.quantity + 1 } : ci
           ),
         };
       }
-      return { ...state, items: [...state.items, { item: action.payload, quantity: 1 }] };
+      return { ...state, items: [...state.items, { product: action.payload, quantity: 1 }] };
     }
     case 'REMOVE_ITEM': {
-      const existing = state.items.find((ci) => ci.item.id === action.payload);
+      const existing = state.items.find((ci) => ci.product.id === action.payload);
       if (existing && existing.quantity > 1) {
         return {
           ...state,
           items: state.items.map((ci) =>
-            ci.item.id === action.payload ? { ...ci, quantity: ci.quantity - 1 } : ci
+            ci.product.id === action.payload ? { ...ci, quantity: ci.quantity - 1 } : ci
           ),
         };
       }
-      return { ...state, items: state.items.filter((ci) => ci.item.id !== action.payload) };
+      return { ...state, items: state.items.filter((ci) => ci.product.id !== action.payload) };
     }
-    case 'SET_QUANTITY': {
-      if (action.payload.quantity <= 0) {
-        return { ...state, items: state.items.filter((ci) => ci.item.id !== action.payload.id) };
-      }
-      return {
-        ...state,
-        items: state.items.map((ci) =>
-          ci.item.id === action.payload.id ? { ...ci, quantity: action.payload.quantity } : ci
-        ),
-      };
-    }
+    case 'CLEAR':
+      return initialState;
     case 'SET_DELIVERY':
-      return { ...state, deliveryOptionId: action.payload };
+      return { ...state, deliveryType: action.payload };
     case 'TOGGLE_GREEN':
       return { ...state, greenContribution: !state.greenContribution };
     case 'TOGGLE_CUTLERY':
       return { ...state, cutlery: !state.cutlery };
+    case 'SET_PROMO':
+      return { ...state, promoCode: action.payload.code, promoDiscount: action.payload.discount };
+    case 'CLEAR_PROMO':
+      return { ...state, promoCode: '', promoDiscount: 0 };
     default:
       return state;
   }
@@ -89,7 +90,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const [state, dispatch] = useReducer(cartReducer, initialState);
 
   const totalItems = state.items.reduce((sum, ci) => sum + ci.quantity, 0);
-  const subtotal = state.items.reduce((sum, ci) => sum + ci.item.price * ci.quantity, 0);
+  const subtotal = state.items.reduce((sum, ci) => sum + ci.product.price * ci.quantity, 0);
 
   return (
     <CartContext.Provider value={{ state, dispatch, totalItems, subtotal }}>

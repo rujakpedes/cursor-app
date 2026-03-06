@@ -1,11 +1,12 @@
 import React from 'react';
 import { MapPin } from 'lucide-react';
-import { deliveryOptions } from '../../data/menuData';
+import { useStore } from '../../context/StoreContext';
 import { useCart } from '../../context/CartContext';
 import { DeliveryOptionCard } from '../molecules/DeliveryOptionCard';
 import './DeliverySection.css';
 
 export const DeliverySection: React.FC = () => {
+  const { deliveryOptions } = useStore();
   const { state, dispatch } = useCart();
 
   return (
@@ -22,7 +23,7 @@ export const DeliverySection: React.FC = () => {
           <DeliveryOptionCard
             key={opt.id}
             option={opt}
-            selected={state.deliveryOptionId === opt.id}
+            selected={state.deliveryType === opt.id}
             onSelect={() => dispatch({ type: 'SET_DELIVERY', payload: opt.id })}
           />
         ))}
