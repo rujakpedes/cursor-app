@@ -1,0 +1,101 @@
+.checkout-page {
+  padding-bottom: 180px;
+}
+
+.checkout-page__topbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--gray-100);
+  position: sticky;
+  top: 0;
+  background: var(--white);
+  z-index: 10;
+}
+
+.checkout-page__back {
+  color: var(--gray-700);
+  flex-shrink: 0;
+}
+
+.checkout-page__topbar-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.checkout-page__topbar-sub {
+  font-size: 11px;
+  color: var(--gray-500);
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-top: 1px;
+}
+
+.checkout-page__divider {
+  height: 8px;
+  background: var(--gray-100);
+  margin: 8px 0;
+}
+
+.checkout-page__footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 480px;
+  padding: 16px 20px;
+  background: var(--white);
+  border-top: 1px solid var(--gray-200);
+  z-index: 100;
+}
+
+.checkout-page__footer-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.checkout-page__footer-label {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.checkout-page__footer-saved {
+  font-size: 12px;
+  color: var(--gray-500);
+  margin-top: 1px;
+}
+
+.checkout-page__footer-right {
+  text-align: right;
+}
+
+.checkout-page__footer-amount {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.checkout-page__footer-strike {
+  font-size: 13px;
+  color: var(--gray-400);
+  text-decoration: line-through;
+}
+
+.checkout-page__place-order {
+  width: 100%;
+  padding: 14px;
+  background: var(--blue-600);
+  color: var(--white);
+  border-radius: var(--radius-lg);
+  font-size: 16px;
+  font-weight: 600;
+  transition: background 0.15s;
+}
+
+.checkout-page__place-order:hover {
+  background: var(--blue-500);
+}
