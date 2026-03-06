@@ -33,8 +33,6 @@ public class Order extends BaseEntity {
 
     private Long deliveryFee;
 
-    private Long platformFee;
-
     private Long discount;
 
     private Long total;
@@ -68,8 +66,6 @@ public class Order extends BaseEntity {
     public void setSubtotal(Long subtotal) { this.subtotal = subtotal; }
     public Long getDeliveryFee() { return deliveryFee; }
     public void setDeliveryFee(Long deliveryFee) { this.deliveryFee = deliveryFee; }
-    public Long getPlatformFee() { return platformFee; }
-    public void setPlatformFee(Long platformFee) { this.platformFee = platformFee; }
     public Long getDiscount() { return discount; }
     public void setDiscount(Long discount) { this.discount = discount; }
     public Long getTotal() { return total; }

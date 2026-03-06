@@ -79,7 +79,6 @@ public class OrderService {
             default -> store.getDeliveryFeeStandard();
         };
         order.setDeliveryFee(deliveryFee);
-        order.setPlatformFee(store.getPlatformFee());
 
         long discount = 0;
         if (req.promoCode() != null && !req.promoCode().isBlank()) {
@@ -98,7 +97,7 @@ public class OrderService {
 
         long prioritySurcharge = req.deliveryType() == DeliveryType.PRIORITY ? store.getPrioritySurcharge() : 0;
         long greenFee = req.greenContribution() ? 200 : 0;
-        order.setTotal(subtotal + deliveryFee + store.getPlatformFee() + prioritySurcharge + greenFee - discount);
+        order.setTotal(subtotal + deliveryFee + prioritySurcharge + greenFee - discount);
 
         order.setStatus(OrderStatus.PENDING);
         Order saved = orderRepo.save(order);

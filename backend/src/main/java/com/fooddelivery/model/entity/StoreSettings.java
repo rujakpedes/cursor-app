@@ -20,7 +20,6 @@ public class StoreSettings extends BaseEntity {
     private Long deliveryFeeStandard = 21000L;
     private Long deliveryFeePriority = 25000L;
     private Long deliveryFeeSaver = 13000L;
-    private Long platformFee = 4500L;
     private Long prioritySurcharge = 4000L;
 
     private Integer deliveryTimeStandard = 74;
@@ -50,8 +49,6 @@ public class StoreSettings extends BaseEntity {
     public void setDeliveryFeePriority(Long fee) { this.deliveryFeePriority = fee; }
     public Long getDeliveryFeeSaver() { return deliveryFeeSaver; }
     public void setDeliveryFeeSaver(Long fee) { this.deliveryFeeSaver = fee; }
-    public Long getPlatformFee() { return platformFee; }
-    public void setPlatformFee(Long platformFee) { this.platformFee = platformFee; }
     public Long getPrioritySurcharge() { return prioritySurcharge; }
     public void setPrioritySurcharge(Long prioritySurcharge) { this.prioritySurcharge = prioritySurcharge; }
     public Integer getDeliveryTimeStandard() { return deliveryTimeStandard; }

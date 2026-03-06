@@ -17,12 +17,11 @@ export const OrderSummary: React.FC = () => {
 
   const selectedOpt = deliveryOptions.find((d) => d.id === state.deliveryType);
   const deliveryFee = selectedOpt?.fee ?? settings.deliveryFeeStandard;
-  const platformFee = settings.platformFee;
   const prioritySurcharge = state.deliveryType === 'PRIORITY' ? settings.prioritySurcharge : 0;
   const greenFee = state.greenContribution ? 200 : 0;
   const discount = state.promoDiscount;
 
-  const total = subtotal + deliveryFee + platformFee + prioritySurcharge + greenFee - discount;
+  const total = subtotal + deliveryFee + prioritySurcharge + greenFee - discount;
 
   return (
     <div className="order-summary">
@@ -40,7 +39,6 @@ export const OrderSummary: React.FC = () => {
       <div className="order-summary__fees">
         <div className="fee-row"><span>Subtotal (Incl. Tax)</span><span>{formatRupiah(subtotal)}</span></div>
         <div className="fee-row"><span>Delivery fee</span><span>{formatRupiah(deliveryFee)}</span></div>
-        <div className="fee-row"><span>Platform fee</span><span>{formatRupiah(platformFee)}</span></div>
         {prioritySurcharge > 0 && (
           <div className="fee-row"><span>Priority delivery</span><span>{formatRupiah(prioritySurcharge)}</span></div>
         )}

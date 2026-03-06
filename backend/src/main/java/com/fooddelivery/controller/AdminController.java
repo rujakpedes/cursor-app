@@ -158,7 +158,6 @@ public class AdminController {
         s.setDeliveryFeeStandard(current.deliveryFeeStandard());
         s.setDeliveryFeePriority(current.deliveryFeePriority());
         s.setDeliveryFeeSaver(current.deliveryFeeSaver());
-        s.setPlatformFee(current.platformFee());
         s.setPrioritySurcharge(current.prioritySurcharge());
         s.setDeliveryTimeStandard(current.deliveryTimeStandard());
         s.setDeliveryTimePriority(current.deliveryTimePriority());

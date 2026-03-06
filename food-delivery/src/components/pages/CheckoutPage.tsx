@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, Info } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { useCart } from '../../context/CartContext';
 import { useStore } from '../../context/StoreContext';
 import { useAuth } from '../../context/AuthContext';
@@ -27,11 +27,10 @@ export const CheckoutPage: React.FC = () => {
 
   const selectedOpt = deliveryOptions.find((d) => d.id === state.deliveryType);
   const deliveryFee = selectedOpt?.fee ?? settings.deliveryFeeStandard;
-  const platformFee = settings.platformFee;
   const prioritySurcharge = state.deliveryType === 'PRIORITY' ? settings.prioritySurcharge : 0;
   const greenFee = state.greenContribution ? 200 : 0;
   const discount = state.promoDiscount;
-  const total = subtotal + deliveryFee + platformFee + prioritySurcharge + greenFee - discount;
+  const total = subtotal + deliveryFee + prioritySurcharge + greenFee - discount;
 
   const placeOrder = async () => {
     if (!isLoggedIn && !guestEmail) {
@@ -69,11 +68,8 @@ export const CheckoutPage: React.FC = () => {
           <ArrowLeft size={22} />
         </button>
         <div>
-          <h1 className="checkout-page__title">{settings.storeName} - {settings.location}</h1>
-          <p className="checkout-page__sub">
-            Delivery fee calculated at {new Date().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' })}
-            <Info size={12} style={{ marginLeft: 4, verticalAlign: 'middle' }} />
-          </p>
+          <h1 className="checkout-page__title">{settings.storeName}</h1>
+          <p className="checkout-page__sub">{settings.location}</p>
         </div>
       </header>
 

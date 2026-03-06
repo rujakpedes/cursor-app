@@ -20,7 +20,6 @@ export interface StoreSettings {
   deliveryFeeStandard: number;
   deliveryFeePriority: number;
   deliveryFeeSaver: number;
-  platformFee: number;
   prioritySurcharge: number;
   deliveryTimeStandard: number;
   deliveryTimePriority: number;
@@ -44,7 +43,6 @@ export interface OrderResponse {
   deliveryType: string;
   subtotal: number;
   deliveryFee: number;
-  platformFee: number;
   discount: number;
   total: number;
   items: OrderItemResponse[];

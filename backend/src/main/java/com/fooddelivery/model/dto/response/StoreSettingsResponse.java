@@ -14,7 +14,6 @@ public record StoreSettingsResponse(
         Long deliveryFeeStandard,
         Long deliveryFeePriority,
         Long deliveryFeeSaver,
-        Long platformFee,
         Long prioritySurcharge,
         Integer deliveryTimeStandard,
         Integer deliveryTimePriority,
@@ -27,7 +26,7 @@ public record StoreSettingsResponse(
                 s.getId(), s.getStoreName(), s.getLocation(), s.getPhone(), s.getEmail(),
                 s.getLogoUrl(), s.getRating(), s.getReviewCount(),
                 s.getDeliveryFeeStandard(), s.getDeliveryFeePriority(), s.getDeliveryFeeSaver(),
-                s.getPlatformFee(), s.getPrioritySurcharge(),
+                s.getPrioritySurcharge(),
                 s.getDeliveryTimeStandard(), s.getDeliveryTimePriority(), s.getDeliveryTimeSaver(),
                 s.isMaintenanceMode(), s.getMaintenanceMessage()
         );

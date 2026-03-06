@@ -10,7 +10,6 @@ interface Settings {
   deliveryFeeStandard: number;
   deliveryFeePriority: number;
   deliveryFeeSaver: number;
-  platformFee: number;
   prioritySurcharge: number;
   deliveryTimeStandard: number;
   deliveryTimePriority: number;
@@ -96,16 +95,9 @@ export const SettingsPage: React.FC = () => {
             <input type="number" value={settings.deliveryFeeSaver} onChange={(e) => u('deliveryFeeSaver', Number(e.target.value))} />
           </div>
           <div className="form-group">
-            <label>Platform Fee</label>
-            <input type="number" value={settings.platformFee} onChange={(e) => u('platformFee', Number(e.target.value))} />
-          </div>
-        </div>
-        <div className="form-row">
-          <div className="form-group">
             <label>Priority Surcharge</label>
             <input type="number" value={settings.prioritySurcharge} onChange={(e) => u('prioritySurcharge', Number(e.target.value))} />
           </div>
-          <div className="form-group" />
         </div>
       </div>
 

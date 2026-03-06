@@ -33,7 +33,6 @@ public class StoreSettingsService {
         s.setDeliveryFeeStandard(updated.getDeliveryFeeStandard());
         s.setDeliveryFeePriority(updated.getDeliveryFeePriority());
         s.setDeliveryFeeSaver(updated.getDeliveryFeeSaver());
-        s.setPlatformFee(updated.getPlatformFee());
         s.setPrioritySurcharge(updated.getPrioritySurcharge());
         s.setDeliveryTimeStandard(updated.getDeliveryTimeStandard());
         s.setDeliveryTimePriority(updated.getDeliveryTimePriority());
