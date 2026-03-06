@@ -1,8 +1,8 @@
 import Badge from '../atoms/Badge';
 import IconButton from '../atoms/IconButton';
 import QuantityControl from './QuantityControl';
-import { formatPrice } from '../atoms/PriceTag';
-import { useCart } from '../../context/CartContext';
+import { formatPrice } from '../../utils/formatPrice';
+import { useCart } from '../../context/useCart';
 import './MenuCard.css';
 
 export default function MenuCard({ item }) {

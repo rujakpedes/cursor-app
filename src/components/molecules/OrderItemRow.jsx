@@ -1,4 +1,4 @@
-import { formatPrice } from '../atoms/PriceTag';
+import { formatPrice } from '../../utils/formatPrice';
 import './OrderItemRow.css';
 
 export default function OrderItemRow({ item, quantity }) {

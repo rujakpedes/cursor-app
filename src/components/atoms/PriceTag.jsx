@@ -1,8 +1,5 @@
+import { formatPrice } from '../../utils/formatPrice';
 import './PriceTag.css';
-
-function formatPrice(price) {
-  return new Intl.NumberFormat('id-ID').format(price);
-}
 
 export default function PriceTag({ price, originalPrice, size = 'md' }) {
   return (
@@ -18,5 +15,3 @@ export default function PriceTag({ price, originalPrice, size = 'md' }) {
     </span>
   );
 }
-
-export { formatPrice };

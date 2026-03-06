@@ -1,4 +1,4 @@
-import { useCart } from '../../context/CartContext';
+import { useCart } from '../../context/useCart';
 import { deliveryOptions, restaurant } from '../../data/restaurant';
 import DeliveryOptionCard from '../molecules/DeliveryOptionCard';
 import './DeliverySection.css';

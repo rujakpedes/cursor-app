@@ -1,4 +1,4 @@
-import { formatPrice } from '../atoms/PriceTag';
+import { formatPrice } from '../../utils/formatPrice';
 import './FeeRow.css';
 
 export default function FeeRow({ label, amount, icon, isDiscount }) {

@@ -1,9 +1,9 @@
-import { useCart } from '../../context/CartContext';
+import { useCart } from '../../context/useCart';
 import { menuItems, fees, deliveryOptions } from '../../data/restaurant';
 import OrderItemRow from '../molecules/OrderItemRow';
 import FeeRow from '../molecules/FeeRow';
 import Toggle from '../atoms/Toggle';
-import { formatPrice } from '../atoms/PriceTag';
+import { formatPrice } from '../../utils/formatPrice';
 import './OrderSummary.css';
 
 export default function OrderSummary() {

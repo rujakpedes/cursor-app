@@ -3,9 +3,9 @@ import TopBar from '../organisms/TopBar';
 import OrderSummary from '../organisms/OrderSummary';
 import DeliverySection from '../organisms/DeliverySection';
 import PaymentSection from '../organisms/PaymentSection';
-import { useCart } from '../../context/CartContext';
+import { useCart } from '../../context/useCart';
 import { menuItems, fees, deliveryOptions } from '../../data/restaurant';
-import { formatPrice } from '../atoms/PriceTag';
+import { formatPrice } from '../../utils/formatPrice';
 import './CheckoutPage.css';
 
 export default function CheckoutPage() {

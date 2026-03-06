@@ -1,6 +1,6 @@
-import { useCart } from '../../context/CartContext';
+import { useCart } from '../../context/useCart';
 import { menuItems } from '../../data/restaurant';
-import { formatPrice } from '../atoms/PriceTag';
+import { formatPrice } from '../../utils/formatPrice';
 import './CartBar.css';
 
 export default function CartBar({ onCheckout }) {
