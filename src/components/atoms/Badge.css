@@ -1,0 +1,20 @@
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+}
+
+.badge--ordered {
+  background: var(--color-primary);
+}
+
+.badge--liked {
+  background: var(--color-badge-liked);
+}

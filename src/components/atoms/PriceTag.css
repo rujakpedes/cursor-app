@@ -1,0 +1,25 @@
+.price-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.price-tag__normal {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.price-tag__sale {
+  font-weight: 700;
+  color: var(--color-discount);
+}
+
+.price-tag__original {
+  text-decoration: line-through;
+  color: var(--color-text-light);
+  font-size: 0.85em;
+}
+
+.price-tag--sm { font-size: 13px; }
+.price-tag--md { font-size: 14px; }
+.price-tag--lg { font-size: 18px; }
