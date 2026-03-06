@@ -1,0 +1,35 @@
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  transition: background 0.15s;
+}
+
+.icon-btn--default {
+  background: var(--white);
+  color: var(--gray-700);
+}
+
+.icon-btn--default:hover {
+  background: var(--gray-100);
+}
+
+.icon-btn--primary {
+  background: var(--blue-600);
+  color: var(--white);
+}
+
+.icon-btn--primary:hover {
+  background: var(--blue-500);
+}
+
+.icon-btn--add {
+  background: var(--blue-600);
+  color: var(--white);
+  width: 30px;
+  height: 30px;
+  box-shadow: var(--shadow-md);
+}
