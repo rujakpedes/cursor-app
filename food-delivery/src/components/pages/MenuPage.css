@@ -1,0 +1,9 @@
+.menu-page {
+  background: var(--color-white);
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+.menu-page__spacer {
+  height: 80px;
+}
