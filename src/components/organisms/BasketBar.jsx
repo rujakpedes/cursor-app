@@ -1,5 +1,5 @@
 import { ChevronDown } from 'lucide-react';
-import { useCart } from '../../context/CartContext';
+import { useCart } from '../../context/useCart';
 import { formatPrice } from '../../data/restaurant';
 import { useNavigate } from 'react-router-dom';
 import './BasketBar.css';

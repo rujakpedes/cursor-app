@@ -1,6 +1,6 @@
 import { ArrowLeft, Info } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { useCart } from '../context/CartContext';
+import { useCart } from '../context/useCart';
 import { formatPrice, deliveryOptions } from '../data/restaurant';
 import { restaurant } from '../data/restaurant';
 import OrderSummary from '../components/organisms/OrderSummary';

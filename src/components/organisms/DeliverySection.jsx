@@ -1,7 +1,7 @@
 import { MapPin } from 'lucide-react';
 import DeliveryOption from '../molecules/DeliveryOption';
 import { deliveryOptions } from '../../data/restaurant';
-import { useCart } from '../../context/CartContext';
+import { useCart } from '../../context/useCart';
 import './DeliverySection.css';
 
 export default function DeliverySection() {

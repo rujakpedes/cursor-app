@@ -1,7 +1,7 @@
 import { Plus } from 'lucide-react';
 import Badge from '../atoms/Badge';
 import QuantityControl from './QuantityControl';
-import { useCart } from '../../context/CartContext';
+import { useCart } from '../../context/useCart';
 import { formatPrice } from '../../data/restaurant';
 import './MenuItem.css';
 
