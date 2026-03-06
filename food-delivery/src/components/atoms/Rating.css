@@ -1,0 +1,14 @@
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-sm);
+}
+
+.rating__value {
+  font-weight: 600;
+}
+
+.rating__count {
+  color: var(--color-text-muted);
+}

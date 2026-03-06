@@ -1,0 +1,25 @@
+.price {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.price--sm { font-size: var(--font-xs); }
+.price--md { font-size: var(--font-sm); }
+.price--lg { font-size: var(--font-xl); font-weight: 700; }
+
+.price__amount {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.price__discount {
+  font-weight: 700;
+  color: var(--color-discount);
+}
+
+.price__original {
+  text-decoration: line-through;
+  color: var(--color-text-muted);
+  font-weight: 400;
+}

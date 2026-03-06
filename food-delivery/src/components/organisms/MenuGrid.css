@@ -1,0 +1,15 @@
+.menu-grid-section {
+  padding: 16px;
+}
+
+.menu-grid__title {
+  font-size: var(--font-xl);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}

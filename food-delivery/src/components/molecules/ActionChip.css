@@ -1,0 +1,18 @@
+.action-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background: var(--color-white);
+  font-size: var(--font-sm);
+  font-weight: 500;
+  color: var(--color-text);
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+
+.action-chip:active {
+  background: var(--color-off-white);
+}
