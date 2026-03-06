@@ -1,36 +1,16 @@
-# Welcome to My GitHub Profile!
+# React + Vite
 
-Hi there! 👋 I’m [**Rujakpedes**](https://github.com/rujakpedes), a passionate software developer with a knack for building efficient and scalable applications. Here's a bit about me:
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 🎓 Education
-- Bachelor of Science in Computer Science from [XYZ University](https://www.xyzuniversity.edu)
+Currently, two official plugins are available:
 
-## 💼 Professional Experience
-- **Software Engineer** at [Tech Solutions Inc.](https://www.techsolutions.com)  
-  _2022 - Present_
-- **Junior Developer** at [InovaTech](https://www.inovatech.com)  
-  _2020 - 2022_
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## 💻 Tech Stack
-- **Languages:** JavaScript, Python, Java, C#  
-- **Frameworks:** React, Node.js, Django  
-- **Databases:** PostgreSQL, MongoDB  
-- **Other Tools:** Docker, Git, Jenkins
+## React Compiler
 
-## 🌟 Projects
-- [Awesome Project](https://github.com/rujakpedes/awesome-project)  
- A groundbreaking project that revolutionizes the way we interact with technology.
-- [Cool App](https://github.com/rujakpedes/cool-app)  
- A user-friendly application that simplifies everyday tasks.
-- [Next Big Thing](https://github.com/rujakpedes/next-big-thing)  
- A cutting-edge solution to modern problems.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 🌐 Connect with Me
-- [Twitter](https://twitter.com/rujakpedes)  
-- [LinkedIn](https://linkedin.com/in/rujakpedes)  
-- [Personal Website](https://rujakpedes.dev)  
+## Expanding the ESLint configuration
 
-## 📫 How to Reach Me
-Feel free to reach out via email at rujakpedes@example.com for collaboration or inquiries. Let’s connect!  
-
-Thank you for visiting my profile!
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
