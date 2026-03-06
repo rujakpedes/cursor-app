@@ -1,0 +1,46 @@
+.menu-card {
+  background: var(--color-bg-white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.menu-card__image-wrap {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.menu-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu-card__action {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
+
+.menu-card__info {
+  padding: 10px 12px;
+}
+
+.menu-card__name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.menu-card__price {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text);
+}
